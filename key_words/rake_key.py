@@ -1,9 +1,12 @@
 # -*- coding: utf8 -*-
 import pymorphy2
 from natasha import Segmenter, NewsEmbedding, NewsMorphTagger, Doc, NewsNERTagger, MorphVocab
+import nltk
+nltk.download('stopwords')
 from nltk.corpus import stopwords
 from rake_nltk import Rake
 from rutermextract import TermExtractor
+
 
 morph = pymorphy2.MorphAnalyzer()
 
@@ -13,7 +16,7 @@ emb = NewsEmbedding()
 morph_tagger = NewsMorphTagger(emb)
 ner_tagger = NewsNERTagger(emb)
 
-my_stops = open(r'C:\Users\lucky\Desktop\bot\tg_bot\key_words\stops.txt', 'r', encoding='utf-8')
+my_stops = open(r'..\key_words\stops.txt', 'r', encoding='utf-8')
 my_stops = my_stops.readlines()
 for ind, val in enumerate(my_stops):
     my_stops[ind] = val.rstrip('\n').strip()
