@@ -13,7 +13,7 @@ emb = NewsEmbedding()
 morph_tagger = NewsMorphTagger(emb)
 ner_tagger = NewsNERTagger(emb)
 
-my_stopwords = open('stops.txt', 'r', encoding='utf-8')
+my_stopwords = open('key_words/stops.txt', 'r', encoding='utf-8')
 my_stopwords = my_stopwords.readlines()
 
 for ind, val in enumerate(my_stopwords):
