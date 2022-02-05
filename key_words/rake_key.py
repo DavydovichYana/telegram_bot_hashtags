@@ -1,13 +1,9 @@
 # -*- coding: utf8 -*-
-import nltk
 import pymorphy2
 from natasha import Segmenter, NewsEmbedding, NewsMorphTagger, Doc, NewsNERTagger, MorphVocab
 
-nltk.download("stopwords")
-from nltk.corpus import stopwords
 from rake_nltk import Rake
 from rutermextract import TermExtractor
-
 
 morph = pymorphy2.MorphAnalyzer()
 
@@ -17,11 +13,12 @@ emb = NewsEmbedding()
 morph_tagger = NewsMorphTagger(emb)
 ner_tagger = NewsNERTagger(emb)
 
-my_stops = open('stops.txt', 'r', encoding='utf-8')
-my_stops = my_stops.readlines()
-for ind, val in enumerate(my_stops):
-    my_stops[ind] = val.rstrip('\n').strip()
-my_stopwords = stopwords.words("english") + stopwords.words("russian") + my_stops
+my_stopwords = open('stops.txt', 'r', encoding='utf-8')
+my_stopwords = my_stopwords.readlines()
+
+for ind, val in enumerate(my_stopwords):
+    my_stopwords[ind] = val.rstrip('\n').strip()
+
 marks = "'?_–=-!()[]{};?@#$%:'\"\,./^&;*_«»~`‹…›—·"
 
 
@@ -70,6 +67,8 @@ class Hashtags:
                     all_phrases.remove(words)
 
         for index, phrase in enumerate(all_phrases):
-            all_phrases[index] = '#' + phrase.translate({ord(i): None for i in marks}).strip().replace("  ", "_").replace(" ", "_")
+            all_phrases[index] = '#' + phrase.translate({ord(i): None for i in marks}).strip().replace("  ",
+                                                                                                       "_").replace(" ",
+                                                                                                                    "_")
         all_phrases = set(all_phrases)
         return str(all_phrases)[1:-1].replace("'", "")
