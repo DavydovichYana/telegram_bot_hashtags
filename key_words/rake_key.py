@@ -1,7 +1,9 @@
 # -*- coding: utf8 -*-
+import nltk
 import pymorphy2
 from natasha import Segmenter, NewsEmbedding, NewsMorphTagger, Doc, NewsNERTagger, MorphVocab
-import nltk
+
+nltk.download("stopwords")
 from nltk.corpus import stopwords
 from rake_nltk import Rake
 from rutermextract import TermExtractor
