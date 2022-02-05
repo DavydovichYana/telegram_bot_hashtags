@@ -1,4 +1,6 @@
 # -*- coding: utf8 -*-
+import nltk
+nltk.download('punkt')
 import pymorphy2
 from natasha import Segmenter, NewsEmbedding, NewsMorphTagger, Doc, NewsNERTagger, MorphVocab
 
