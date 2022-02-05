@@ -13,10 +13,7 @@ b1 = KeyboardButton('Ввести текст 🖌')
 b2 = KeyboardButton('Инструкция 🔍')
 b3 = KeyboardButton('Ссылки 🎓')
 b4 = KeyboardButton('Оценить 😎')
-
-
 kb_client = ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard = True)
-
 kb_client.row(b1,b2).row(b3,b4)
 
 
