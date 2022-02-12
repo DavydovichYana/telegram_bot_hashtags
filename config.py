@@ -1,2 +1,2 @@
-TOKEN = '5248249256:AAF4ALRsUFGinSySDxL82hg-_8m15ejazTQ'
-URL_APP = 'https://hashtagsgeneratorbot.herokuapp.com/'
+TOKEN = your_bot_token
+URL_APP = your_bot_url
