@@ -21,7 +21,7 @@ my_stopwords = my_stopwords.readlines()
 for ind, val in enumerate(my_stopwords):
     my_stopwords[ind] = val.rstrip('\n').strip()
 
-marks = "'?_–=-!()[]{};?@#$%:'\"\,./^&;*_«»~`‹…›—·"
+marks = "№'?_–=-!()[]{};?@#$%:'\"\,./^&;*_«»~`‹…›—·"
 
 
 class Hashtags:
