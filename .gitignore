@@ -1,3 +1,6 @@
 /venv_tg/
 /.idea/
 __pycache__/
+/handlers/__pycache__/
+/key_words/__pycache__/
+/keyboards/__pycache__/
