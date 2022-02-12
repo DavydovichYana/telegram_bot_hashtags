@@ -13,3 +13,4 @@ You can find the token asking *BotFather*. URL_APP is a url of your bot, uploade
 the bot can be improved, that I'm planning to do:
 1) add a database for collecting likes and dislikes
 2) improve keyword-extraction algorithm (espacially bringing to a normal form)
+3) widen a stop-words list 
